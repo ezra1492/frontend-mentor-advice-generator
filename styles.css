@@ -9,6 +9,82 @@
   padding: 0;
 }
 
-/* ===== 
- FONTS ↓
-===== */
+/* ================== 
+ DESIGN TOKEN VAULT ↓
+================== */
+:root {
+  /* -----------------
+    PRIMITIVE TOKENS ↓
+    --------------- */
+
+  /* UNUSED ASSETS (Excluded per DRY principle):
+       - White (#ffffff) and Black (#000000) colors are defined but not used in the design.
+       - Blue 600 (#4f5d74) is defined but not used in the design, as the hr element is an image.
+       - Space 0 (0rem)
+    */
+
+  /* Colors */
+  --clr-blue-950: #202733; /* Body bg */
+  --clr-blue-900: #313a48; /* Card bg */
+  --clr-blue-200: #cee3e9; /* Quote color */
+  --clr-green-300: #53ffaa; /* Button, label color */
+
+  /* Typography Scale */
+  --font-size-xs: 0.6875rem; /* 11px | Attribution fs */
+  --font-size-sm: 0.8125rem; /* 13px | Label fs */
+  --font-size-md: 1.5rem; /* 24px | Mobile quote fs */
+  --font-size-lg: 1.75rem; /* 28px | Desktop quote fs */
+
+  /* Line Height */
+  --line-height: 1.35; /* 135% All text */
+
+  /* Letter Spacing */
+  --letter-spacing-tight: -0.01875rem; /* -0.3px | Quote */
+  --letter-spacing-wide: 0.25rem; /* 4px | Label */
+
+  /* Spacing Scale */
+  --space-200: 1rem; /* 16px */
+  --space-300: 1.5rem; /* 24px */
+  --space-400: 2rem; /* 32px */
+  --space-500: 2.5rem; /* 40px */
+
+  /* Border radius */
+  --radius-lg: 50%; /* Button */
+  --radius-md: 0.9375rem; /* 15px | Desktop */
+  --radius-sm: 0.625rem; /* 10px | Mobile*/
+
+  /* Font Family */
+  --font-family: "Manrope", system-ui, sans-serif;
+
+  /* ---------------
+    PRIMITIVE TOKENS ↑
+    --------------- */
+
+  /* ----------------
+    SEMANTIC TOKENS ↓
+    --------------- */
+
+  /* Card Component */
+  --card-bg: var(--clr-blue-900);
+  --card-radius: var(--radius-md);
+  --card-max-width: 23.4375rem; /* 375px |  */
+
+  /* Typography */
+  --label-fs: var(--font-size-sm);
+  --label-line-height: var(--line-height);
+  --label-letter-spacing: var(--letter-spacing-wide);
+  --label-color: var(--clr-green-300);
+
+  --quote-fs: var(--font-size-lg);
+  --quote-line-height: var(--line-height);
+  --quote-letter-spacing: var(--letter-spacing-tight);
+  --quote-color: var(--clr-blue-200);
+
+  /* Button */
+  --btn-size: 4rem; /* 64px | width & height */
+  --btn-bg-color: var(--clr-green-300);
+  --btn-radius: var(--radius-lg);
+  /* ----------------
+    SEMANTIC TOKENS ↑
+    --------------- */
+}

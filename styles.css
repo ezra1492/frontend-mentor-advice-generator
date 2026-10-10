@@ -187,6 +187,14 @@ main {
   letter-spacing: var(--label-letter-spacing);
   color: var(--label-color);
 }
+.card__text {
+  margin-bottom: var(--quote-margin-bottom);
+  color: var(--quote-color);
+  font-size: var(--quote-fs);
+  text-align: center;
+  line-height: var(--quote-line-height);
+  letter-spacing: var(--quote-letter-spacing);
+}
 
 /* CARD ↑ */
 

@@ -170,6 +170,24 @@ main {
 
 /* CARD ↓ */
 
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: var(--card-padding);
+  background-color: var(--card-bg);
+  border-radius: var(--card-radius);
+  max-width: var(--card-max-width);
+}
+.card__label {
+  margin-bottom: var(--label-margin-bottom);
+  font-size: var(--label-fs);
+  line-height: var(--label-line-height);
+  letter-spacing: var(--label-letter-spacing);
+  color: var(--label-color);
+}
+
 /* CARD ↑ */
 
 /* ================ 

@@ -44,6 +44,7 @@
 
   /* Spacing Scale */
   --space-200: 1rem; /* 16px */
+  --space-250: 1.25rem; /* 20px */
   --space-300: 1.5rem; /* 24px */
   --space-400: 2rem; /* 32px */
   --space-500: 2.5rem; /* 40px */
@@ -56,6 +57,9 @@
   /* Font Family */
   --font-family: "Manrope", system-ui, sans-serif;
 
+  /* Font Weight */
+  --font-weight-800: 800; /* Extra Bold */
+
   /* ---------------
     PRIMITIVE TOKENS ↑
     --------------- */
@@ -63,6 +67,10 @@
   /* ----------------
     SEMANTIC TOKENS ↓
     --------------- */
+
+  /* Body */
+  --body-bg: var(--clr-blue-950);
+  --body-fw: var(--font-weight-800);
 
   /* Card Component */
   --card-bg: var(--clr-blue-900);
@@ -84,7 +92,43 @@
   --btn-size: 4rem; /* 64px | width & height */
   --btn-bg-color: var(--clr-green-300);
   --btn-radius: var(--radius-lg);
+
+  /* Attribution */
+  --attribution-fs: var(--font-size-xs);
+  --attribution-color: var(--clr-blue-200);
+  --attribution-a-bg-color: var(--clr-green-300);
+  --attribution-a-padding: var(--space-250);
+  --attribution-a-radius: var(--radius-lg);
+  --attribution-a-color: var(--clr-blue-950);
+
   /* ----------------
     SEMANTIC TOKENS ↑
     --------------- */
 }
+
+body {
+  background-color: var(--body-bg);
+  font-family: var(--font-family);
+  font-weight: var(--body-fw);
+}
+
+/* ATRIBUTTION ↓ */
+
+.attribution {
+  color: var(--attribution-color);
+  font-size: var(--attribution-fs);
+  text-align: center;
+}
+.attribution a {
+  padding: var(--attribution-a-padding);
+  color: var(--attribution-a-color);
+  background-color: var(--attribution-a-bg-color);
+  border-radius: var(--attribution-a-radius);
+  transition: box-shadow 0.2s ease-in-out;
+}
+.attribution a:hover,
+.attribution a:focus-visible {
+  box-shadow: 0 0 var(--space-250) var(--attribution-a-bg-color);
+}
+
+/* ATRIBUTTION ↑ */

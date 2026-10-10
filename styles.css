@@ -232,7 +232,22 @@ main {
     background-image: url("./images/pattern-divider-mobile.svg");
   }
 }
-
+.card__button {
+  position: absolute;
+  bottom: 0;
+  transform: translateY(50%);
+  height: var(--btn-size);
+  width: var(--btn-size);
+  padding: var(--button-padding);
+  background-color: var(--btn-bg-color);
+  border-style: none;
+  border-radius: var(--btn-radius);
+  transition: box-shadow 0.2s ease-in-out;
+}
+.card__button:hover,
+.card__button:focus-visible {
+  box-shadow: var(--btn-box-shadow);
+}
 /* CARD ↑ */
 
 /* ================ 

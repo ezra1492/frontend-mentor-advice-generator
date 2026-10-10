@@ -92,6 +92,11 @@
   --quote-color: var(--clr-blue-200);
   --quote-margin-bottom: var(--space-500);
 
+  /* Divider */
+  --divider-height: 1rem; /* 16px | both Desktop and Mobile */
+  --divider-margin-bottom-des: var(--space-500);
+  --divider-margin-bottom-mob: var(--space-400);
+
   /* Button */
   --btn-size: 4rem; /* 64px | width & height */
   --btn-bg-color: var(--clr-green-300);
@@ -195,7 +200,20 @@ main {
   line-height: var(--quote-line-height);
   letter-spacing: var(--quote-letter-spacing);
 }
-
+.card__divider {
+  margin-bottom: var(--divider-margin-bottom-des);
+  width: 100%;
+  height: var(--divider-height);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url("./images/pattern-divider-desktop.svg");
+}
+@media (max-width: 48rem) {
+  .card__divider {
+    margin-bottom: var(--divider-margin-bottom-mob);
+    background-image: url("./images/pattern-divider-mobile.svg");
+  }
+}
 /* CARD ↑ */
 
 /* ================ 

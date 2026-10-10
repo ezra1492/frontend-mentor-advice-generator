@@ -22,8 +22,6 @@
     />
 
     <title>Frontend Mentor | Advice generator app</title>
-
-    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   </head>
   <body>
     <!--MAIN, primary content wrapper. It goes straight to the page core, and it's used once per page to define the dominant area -->
@@ -34,19 +32,21 @@
         <h1 class="visually-hidden">Advice Generator</h1>
 
         <!-- METADATA LABEL, its not a structural title but a label -->
-        <p class="card__label">Advice #<span id="advice-id">1</span></p>
+        <p class="card__label">ADVICE #<span id="advice-id">1</span></p>
 
         <!-- QUOTE BLOCK, the actual advice content, semantically indicates that the text is a quotation from an external source (API). We use <blockquote> instead of <p> when the content is explicitly a quote -->
         <blockquote class="card__text" id="advice-text">
-          ipsum Lorem ipsum dolor sit amet consectetur, adipisicing elit. Id est
-          ea dolorum eos esse mollitia eius, odit voluptatibus excepturi! In
-          debitis rerum porro nobis accusantium nemo nihil quam maxime
-          distinctio!
+          “It is easy to sit up and take notice, what's difficult is getting up
+          and taking action.”
         </blockquote>
 
         <!-- DECORATIVE DIVIDER, visually separates the quote from the button. Images used purely for visual styling must have empty alt attributes -->
         <div class="card__divider">
-          <img src="./images/pattern-divider-desktop.svg" alt="" />
+          <img
+            src="./images/pattern-divider-desktop.svg"
+            alt=""
+            style="display: none"
+          />
         </div>
 
         <!-- GENERATE NEW ADVICE BUTTON, allows users to request a new piece of advice. The aria-label provides an accessible name for the button, describing the action, not the icon  -->

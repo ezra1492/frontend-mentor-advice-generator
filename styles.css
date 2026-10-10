@@ -49,6 +49,8 @@
   --space-400: 2rem; /* 32px */
   --space-500: 2.5rem; /* 40px */
   --space-600: 3rem; /* 48px */
+  --space-800: 4rem; /* 64px */
+  --space-900: 4.5rem; /* 72px */
 
   /* Border radius */
   --radius-lg: 50%; /* Button */
@@ -77,20 +79,25 @@
   --card-bg: var(--clr-blue-900);
   --card-radius: var(--radius-md);
   --card-max-width: 33.75rem; /* 540px |  */
-  --card-padding: var(--space-600);
+  --card-margin-mob: 0 var(--space-200);
+  --card-padding-des: var(--space-500) var(--space-500) var(--space-900);
+  --card-padding-mob: var(--space-500) var(--space-300) var(--space-800);
 
   /* Typography */
   --label-fs: var(--font-size-sm);
   --label-line-height: var(--line-height);
   --label-letter-spacing: var(--letter-spacing-wide);
   --label-color: var(--clr-green-300);
-  --label-margin-bottom: var(--space-300);
+  --label-margin-bottom-des: var(--space-300);
+  --label-margin-bottom-mob: var(--space-200);
 
+  /* Quote */
   --quote-fs: var(--font-size-lg);
   --quote-line-height: var(--line-height);
   --quote-letter-spacing: var(--letter-spacing-tight);
   --quote-color: var(--clr-blue-200);
-  --quote-margin-bottom: var(--space-500);
+  --quote-margin-bottom-des: var(--space-500);
+  --quote-margin-bottom-mob: var(--space-400);
 
   /* Divider */
   --divider-height: 1rem; /* 16px | both Desktop and Mobile */
@@ -180,7 +187,7 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: var(--card-padding);
+  padding: var(--card-padding-des);
   background-color: var(--card-bg);
   border-radius: var(--card-radius);
   max-width: var(--card-max-width);
@@ -195,7 +202,7 @@ main {
 .card__text {
   margin-bottom: var(--quote-margin-bottom);
   color: var(--quote-color);
-  font-size: var(--quote-fs);
+  font-size: clamp(var(--font-size-md), 2.5vw, var(--font-size-lg));
   text-align: center;
   line-height: var(--quote-line-height);
   letter-spacing: var(--quote-letter-spacing);
@@ -208,7 +215,18 @@ main {
   background-position: center;
   background-image: url("./images/pattern-divider-desktop.svg");
 }
+/* Mobile <= 48rem → 768px que en Figma es tamaño tablet   */
 @media (max-width: 48rem) {
+  .card {
+    margin: var(--card-margin-mob);
+    padding: var(--card-padding-mob);
+  }
+  .card__label {
+    margin-bottom: var(--label-margin-bottom-mob);
+  }
+  .card__text {
+    margin-bottom: var(--quote-margin-bottom-mob);
+  }
   .card__divider {
     margin-bottom: var(--divider-margin-bottom-mob);
     background-image: url("./images/pattern-divider-mobile.svg");

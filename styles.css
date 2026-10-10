@@ -43,6 +43,7 @@
   --letter-spacing-wide: 0.25rem; /* 4px | Label */
 
   /* Spacing Scale */
+  --space-50: 0.25rem; /* 4px */
   --space-200: 1rem; /* 16px */
   --space-300: 1.5rem; /* 24px */
   --space-400: 2rem; /* 32px */
@@ -111,8 +112,9 @@
   --attribution-fs: var(--font-size-xs);
   --attribution-color: var(--clr-blue-200);
   --attribution-a-bg-color: var(--clr-green-300);
-  --attribution-a-padding: var(--space-300);
-  --attribution-a-radius: var(--radius-lg);
+  --attribution-a-padding: var(--space-50);
+  --attribution-a-radius: var(--radius-md);
+  --attribution-margin-bottom: var(--space-200);
   --attribution-a-color: var(--clr-blue-950);
   --attribution-box-shadow: 0 0 var(--space-300) var(--attribution-a-bg-color);
 
@@ -156,7 +158,7 @@ main {
 /* ATRIBUTTION ↓ */
 
 .attribution {
-  margin-bottom: 25px; /* provisional, mientras decidimos si dejamos los enlaces visualmente iguales al botón-dado, o si hacemos algo diferente */
+  margin-bottom: var(--attribution-margin-bottom);
   color: var(--attribution-color);
   font-size: var(--attribution-fs);
   text-align: center;
@@ -187,10 +189,10 @@ main {
   justify-content: center;
   align-items: center;
   position: relative;
+  max-width: var(--card-max-width);
   padding: var(--card-padding-des);
   background-color: var(--card-bg);
   border-radius: var(--card-radius);
-  max-width: var(--card-max-width);
 }
 .card__label {
   margin-bottom: var(--label-margin-bottom-des);
@@ -235,7 +237,8 @@ main {
 .card__button {
   position: absolute;
   bottom: 0;
-  transform: translateY(50%);
+  transform: translate(-50%, 50%);
+  left: 50%;
   height: var(--btn-size);
   width: var(--btn-size);
   padding: var(--button-padding);
